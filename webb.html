@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VOGUE — Special Issue</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #f3e8ff, #e6d6ff, #d6c2ff);
+      color: #2a1f3d;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+    }
+
+    .cover {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .vogue {
+      font-size: 5rem;
+      font-weight: 900;
+      letter-spacing: 6px;
+      color: #6f4cae;
+    }
+
+    .headline {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      max-width: 650px;
+      line-height: 1.5;
+      color: #4b367c;
+    }
+
+    .sub {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      opacity: 0.7;
+    }
+
+    /* BUTTON */
+    .play-btn {
+      margin-top: 25px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 25px;
+      background: #6f4cae;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .play-btn:hover {
+      background: #5a3e91;
+      transform: scale(1.05);
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .map img {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 12px;
+      filter: grayscale(100%) contrast(105%);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .texts {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .message {
+      padding: 15px 20px;
+      border-radius: 20px;
+      max-width: 70%;
+      font-size: 1.1rem;
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .left {
+      align-self: flex-start;
+    }
+
+    .right {
+      align-self: flex-end;
+      background: #6f4cae;
+      color: white;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 70px 30px;
+      font-size: 1.4rem;
+      font-family: 'Playfair Display', serif;
+      line-height: 1.6;
+      color: #5a3e91;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- AUDIO -->
+<audio id="bg-music" loop>
+  <source src="raindance.mp3" type="audio/mpeg">
+</audio>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="vogue">VOGUE</div>
+  <div class="headline">
+    the awesomesauce man allegedly dating hema?? sources say paparazzi are losing their minds over it
+  </div>
+  <div class="sub">exclusive • special issue • one month</div>
+
+  <!-- BUTTON -->
+  <button class="play-btn" onclick="playMusic()">play this, baby 💜</button>
+</div>
+
+<!-- MAP -->
+<div class="section map">
+  <h2>The Distance</h2>
+  <img src="map.png" alt="Map">
+</div>
+
+<!-- TEXTS -->
+<div class="section">
+  <div class="texts">
+    <div class="message left">what distance</div>
+    <div class="message right">do you think they found this yet?</div>
+    <div class="message left">happy one month anniversary baby</div>
+    <div class="message right">i love you</div>
+  </div>
+</div>
+
+<!-- FINAL LINE -->
+<div class="footer">
+  you set my sun on fire, baby
+</div>
+
+<!-- SCRIPT -->
+<script>
+  function playMusic() {
+    const audio = document.getElementById("bg-music");
+    audio.currentTime = 175; // 2:55
+    audio.play();
+  }
+</script>
+
+</body>
+</html>
